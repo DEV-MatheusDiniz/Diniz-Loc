@@ -126,7 +126,13 @@ for coluna in colunas:
                 latitude_longitude = pc.paste()
                 espera = False
             except:
-                num_tentativas+=1
+                if (num_tentativas <= 2):
+                    num_tentativas+=1
+                else:
+                    latitude_longitude = 'VAZIO'
+                    print(cont, STR_STATUS, 'Não foi possivel localizar o ponto da localização')
+                    espera = False
+                    break
 
         num_tentativas=1
         espera=True
