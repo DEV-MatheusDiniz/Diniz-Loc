@@ -42,10 +42,8 @@ URL_MAPS = 'https://www.google.com/maps/'
 TEMPO_SLEEP_MIN = 1
 TEMPO_SLEEP_MAX = 3
 
-options = Options()
-options.add_experimental_option("detach", True)
-
-service = Service(ChromeDriverManager().install())
+service = Service()
+options = webdriver.ChromeOptions()
 # End Configuração
 
 
