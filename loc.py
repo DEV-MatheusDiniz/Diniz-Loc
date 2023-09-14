@@ -37,13 +37,15 @@ num_tentativas = 1
 
 STR_STATUS = '[ STATUS ]'
 STR_RESULTADO = '[ RESULTADO ]'
-NOME_PLANILHA = r"gelocalizacao_camed.xlsx"
+NOME_PLANILHA = r"SERPRO.xlsx"
 URL_MAPS = 'https://www.google.com/maps/'
 TEMPO_SLEEP_MIN = 1
 TEMPO_SLEEP_MAX = 3
 
-service = Service()
+caminho = './chromedriver.exe'
+service = Service(caminho)
 options = webdriver.ChromeOptions()
+options.add_experimental_option('excludeSwitches', ['enable-logging'])
 # End Configuração
 
 
